@@ -8,13 +8,13 @@ function App() {
 
   const [fight, setFight] = useState("vs")
 
+  let emojiOne = Math.floor(Math.random() * fighters.length)
+  let emojiTwo = Math.floor(Math.random() * fighters.length)
+
   function fightStage () {
     setFight(prevFight => prevFight =
       fighters[emojiOne] + " vs " + fighters[emojiTwo])
   }
-
-  let emojiOne = Math.floor(Math.random() * fighters.length)
-  let emojiTwo = Math.floor(Math.random() * fighters.length)
 
   function fightBtn () {
     fightStage()
